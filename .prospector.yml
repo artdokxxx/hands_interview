@@ -1,0 +1,30 @@
+strictness: veryhigh
+output-format: pylint
+
+doc-warnings: true
+#ignore-paths:
+#  - __init__.py
+
+pep8:
+  full: true
+  options:
+    max-line-length: 120
+
+pep257:
+  disable:
+    - D100
+    - D101
+    - D102
+    - D103
+    - D104
+    - D105
+    - D106
+    - D107
+pylint:
+  disable:
+    - missing-docstring
+    - useless-object-inheritance
+    - too-few-public-methods
+    - unused-argument
+  options:
+    max-line-length: 120

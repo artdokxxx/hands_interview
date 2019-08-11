@@ -1,0 +1,10 @@
+#IDEA
+.idea/
+site_done.log
+
+# Trash
+.DS_Store
+__pycache__
+.pytest_cache/
+venv/
+.coverage
