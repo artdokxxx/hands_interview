@@ -1,15 +1,16 @@
 import os
 
-basedir = os.path.abspath(os.path.dirname(__file__))
+BASEDIR = os.path.abspath(os.path.dirname(__file__))
 
 
 class BaseConfig(object):
-    """ Base configuration """
+    """Base configuration."""
+
     NAME = 'BaseConfig'
     TESTING = False
     DEV = False
     TIMEOUT = 5
-    FILE_DONE = f'{basedir}/site_done.log'
+    FILE_DONE = f'{BASEDIR}/site_done.log'
 
     RE_RULE = r'|'.join([
         r'[\(][-\.\s]??\d{3}[-\.\s]??[\)][-\.\s]??\d{3}[-\.\s]??\d{2}[-\.\s]??\d{2}[\s\<\(а-яА-Яa-zA-Z]',
@@ -42,4 +43,3 @@ def get_config():
     )
     profile = os.environ.get('ENV', 'dev')
     return mappings[profile]
-
